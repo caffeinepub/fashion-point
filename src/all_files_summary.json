@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no functions.",
+  "feature_evidence.json": "Feature evidence report listing implemented features, their files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Text file containing short summaries of major frontend source files.",
+  "frontend/index.css": "Tailwind base and custom CSS variables defining a warm, OKLCH-themed color palette.",
+  "frontend/index.html": "HTML entry point bootstrapping the app and loading main.tsx.",
+  "frontend/src/App.tsx": "Simple root component rendering the LandingPage.",
+  "frontend/src/components/auth/AuthStatus.tsx": "Displays signed-in user's principal and provides a sign-out menu via dropdown.",
+  "frontend/src/components/layout/AppHeader.tsx": "Sticky header with logo, home navigation, and conditional auth controls using Internet Identity.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages a backend actor tied to the current identity and invalidates queries on change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Full authentication provider and hook handling Internet Identity login, logout, stored identity loading, and state tracking.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder for future custom React Query hooks.",
+  "frontend/src/index.css": "Global Tailwind styles defining warm fashion-themed color tokens for light and dark modes.",
+  "frontend/src/main.tsx": "App bootstrap mounting React, wrapping it with InternetIdentityProvider and React Query.",
+  "frontend/src/pages/LandingPage.tsx": "Implements the marketing landing page with a hero section, feature highlights, and calls to action, using React and Tailwind styling.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, typography, container settings, animations, and extended theme values for the app’s design system.",
+  "project_state.json": "Defines project metadata, existing features, requirements, and image needs for the Fashion Point application."
+}

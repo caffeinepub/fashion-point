@@ -1,0 +1,100 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-public-landing-page-for-the-fashion-point-app-with-clear-branding-and-marketing-sections-hero-value-props-and-a-simple-call-to-action-using-english-user-facing-copy",
+      "featureTitle": "Create a responsive public landing page for the “Fashion Point” app with clear branding and marketing sections (hero, value props, and a simple call-to-action) using English user-facing copy.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-basic-top-navigation-layout-app-header-with-links-for-home-and-sign-in-and-wire-sign-in-to-internet-identity-using-the-existing-template-hooks-without-modifying-any-immutable-hook-files",
+      "featureTitle": "Add a basic top navigation layout (app header) with links for Home and Sign In, and wire Sign In to Internet Identity using the existing template hooks (without modifying any immutable hook files).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/AppHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-after-successful-sign-in-show-an-authenticated-state-in-the-ui-e-g-signed-in-plus-the-user-principal-and-a-sign-out-action",
+      "featureTitle": "After successful sign-in, show an authenticated state in the UI (e.g., “Signed in” plus the user principal and a Sign Out action).",
+      "files": [
+        "frontend/src/components/auth/AuthStatus.tsx",
+        "frontend/src/components/layout/AppHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-establish-a-coherent-visual-theme-for-fashion-point-colors-typography-spacing-and-component-styling-and-apply-it-consistently-across-the-landing-page-and-header-avoid-blue-and-purple-as-the-primary-palette",
+      "featureTitle": "Establish a coherent visual theme for Fashion Point (colors, typography, spacing, and component styling) and apply it consistently across the landing page and header. Avoid blue-and-purple as the primary palette.",
+      "files": [
+        "frontend/src/components/layout/AppHeader.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-the-generated-static-images-logo-and-hero-visual-in-the-frontend-as-static-assets-under-frontend-public-assets-generated-and-render-them-on-the-landing-page",
+      "featureTitle": "Include the generated static images (logo and hero visual) in the frontend as static assets under frontend/public/assets/generated and render them on the landing page.",
+      "files": [
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

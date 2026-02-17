@@ -1,0 +1,119 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fashion Point — App shell + landing experience (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a responsive public landing page with Fashion Point branding, hero, value props, and CTA (English copy).",
+      "acceptanceCriteria": [
+        "Visiting the app shows a complete landing page (not a blank/template screen) with a hero section that includes the text “Fashion Point”.",
+        "Landing page is responsive (mobile + desktop layouts).",
+        "All visible UI text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "create",
+          "description": "Create the Fashion Point public landing page with hero, value propositions, and a simple CTA section using responsive Tailwind layout. Use shadcn-ui composition (e.g., Card/Button) where appropriate. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root component that renders the landing experience as the default view (no blank/template screen). Ensure the landing page is reachable from initial load."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a top header navigation with Home and Sign In; wire Sign In to Internet Identity using existing immutable template hooks.",
+      "acceptanceCriteria": [
+        "Header is present on the landing page with “Home” and “Sign In”.",
+        "Clicking “Sign In” triggers Internet Identity login using existing template integration.",
+        "No changes are made to any immutable paths listed in SYSTEM_CONTEXT."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/AppHeader.tsx",
+          "operation": "create",
+          "description": "Create a reusable header with links/actions for Home and Sign In. Use the existing useInternetIdentity hook to trigger login on Sign In click; do not modify immutable hook files. Use shadcn-ui Button (composition) for actions. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the AppHeader into the app layout so it appears on the landing page and Home navigates to the landing view (e.g., via link to root / or scroll-to-top behavior)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Display authenticated UI state after login, including principal and Sign Out action.",
+      "acceptanceCriteria": [
+        "When signed in, the UI displays an authenticated state including the user’s principal.",
+        "A “Sign Out” action is available and returns the UI to the signed-out state."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/auth/AuthStatus.tsx",
+          "operation": "create",
+          "description": "Create an AuthStatus UI component that reads identity from useInternetIdentity, displays “Signed in” plus the principal string, and exposes a Sign Out action that calls clear(). Use shadcn-ui components (e.g., Badge/Button) via composition. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/AppHeader.tsx",
+          "operation": "modify",
+          "description": "Integrate AuthStatus into the header: when signed out show Sign In; when signed in show principal + Sign Out. Keep all user-facing copy in English."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Define and apply a cohesive Fashion Point theme (typography, spacing, colors) across header and landing; avoid blue/purple primary palette.",
+      "acceptanceCriteria": [
+        "A consistent theme is visibly applied across the landing page and header (typography + color + spacing).",
+        "Primary palette is not dominated by blue/purple."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add Tailwind base styles and define a coherent theme using CSS variables consumed by shadcn-ui/Tailwind (background/foreground/primary/etc.). Choose a warm modern palette (e.g., sand/cream + charcoal + terracotta/amber accents) avoiding blue/purple as primary. Apply consistent typography and spacing defaults."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Apply the theme consistently to the landing page sections (typography scale, spacing rhythm, button styles) using Tailwind utilities aligned with the theme variables. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/AppHeader.tsx",
+          "operation": "modify",
+          "description": "Apply the theme consistently to the header (background, border, typographic hierarchy, spacing) using Tailwind utilities aligned with the theme variables. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add generated logo and hero images as static assets and render them on the landing page.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated with the exact filenames specified in Image Requirements.",
+        "Landing page renders the logo and hero image from static assets (not fetched from backend)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/fashion-point-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static logo asset at the exact required path/filename: frontend/public/assets/generated/fashion-point-logo.dim_512x512.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/fashion-point-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated static hero image asset at the exact required path/filename: frontend/public/assets/generated/fashion-point-hero.dim_1600x900.png."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Render the static logo and hero image from frontend/public/assets/generated/fashion-point-logo.dim_512x512.png and frontend/public/assets/generated/fashion-point-hero.dim_1600x900.png within the landing page hero/branding sections (no backend fetching)."
+        }
+      ]
+    }
+  ]
+}

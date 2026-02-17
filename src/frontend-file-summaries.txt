@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the LandingPage as the default view.",
+  "frontend/src/pages/LandingPage.tsx": "Complete landing page with hero section featuring Fashion Point branding, value propositions, feature cards, CTA section, and footer with social links and attribution.",
+  "frontend/src/components/layout/AppHeader.tsx": "Sticky header component with logo, Home navigation, and authentication controls that conditionally shows Sign In button or AuthStatus based on user authentication state.",
+  "frontend/src/components/auth/AuthStatus.tsx": "Authentication status component displaying user principal in a dropdown menu with sign out functionality.",
+  "frontend/src/index.css": "Global styles with warm, fashion-forward OKLCH color system featuring terracotta primary, cream/sand neutrals, and amber accents for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom font families, extended color tokens, warm-themed shadows, and increased border radius for a sophisticated aesthetic.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend functionality is added."
+}

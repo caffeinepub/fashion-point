@@ -1,0 +1,114 @@
+{
+  "kind": "build_request",
+  "title": "Initial Fashion Point app shell + landing experience",
+  "projectName": "Fashion Point",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive public landing page for the “Fashion Point” app with clear branding and marketing sections (hero, value props, and a simple call-to-action) using English user-facing copy.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Fashion point"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting the app shows a complete landing page (not a blank/template screen) with a hero section that includes the text “Fashion Point”.",
+        "Landing page is responsive (mobile + desktop layouts).",
+        "All visible UI text is in English."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a basic top navigation layout (app header) with links for Home and Sign In, and wire Sign In to Internet Identity using the existing template hooks (without modifying any immutable hook files).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Fashion point"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header is present on the landing page with “Home” and “Sign In”.",
+        "Clicking “Sign In” triggers Internet Identity login using existing template integration.",
+        "No changes are made to any immutable paths listed in SYSTEM_CONTEXT."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "After successful sign-in, show an authenticated state in the UI (e.g., “Signed in” plus the user principal and a Sign Out action).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Fashion point"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When signed in, the UI displays an authenticated state including the user’s principal.",
+        "A “Sign Out” action is available and returns the UI to the signed-out state."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Establish a coherent visual theme for Fashion Point (colors, typography, spacing, and component styling) and apply it consistently across the landing page and header. Avoid blue-and-purple as the primary palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Fashion point"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent theme is visibly applied across the landing page and header (typography + color + spacing).",
+        "Primary palette is not dominated by blue/purple."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Include the generated static images (logo and hero visual) in the frontend as static assets under frontend/public/assets/generated and render them on the landing page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Fashion point"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated with the exact filenames specified in Image Requirements.",
+        "Landing page renders the logo and hero image from static assets (not fetched from backend)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (all logic in the main actor file).",
+    "Do not modify immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Use React + TypeScript + Tailwind + shadcn UI composition + React Query (no other frontend frameworks).",
+    "User-facing text must be in English."
+  ],
+  "nonGoals": [
+    "Implementing e-commerce checkout, payments, or product purchasing flows.",
+    "Implementing real-time chat or websocket-driven experiences.",
+    "Integrating third-party auth providers beyond Internet Identity.",
+    "Building a full marketplace backend (inventory, orders, shipping, refunds)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal fashion-themed wordmark logo on transparent background (fashion-point-logo.dim_512x512.png)",
+      "Editorial-style hero illustration featuring abstract fashion elements (fabric folds, silhouettes, accessories) with warm, modern tones (fashion-point-hero.dim_1600x900.png)"
+    ],
+    "edits": []
+  }
+}

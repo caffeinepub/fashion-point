@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project: Fashion point.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal fashion-themed wordmark logo on transparent background (fashion-point-logo.dim_512x512.png)\n- Editorial-style hero illustration featuring abstract fashion elements (fabric folds, silhouettes, accessories) with warm, modern tones (fashion-point-hero.dim_1600x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-public-landing-page-for-the-fashion-point-app-with-clear-branding-and-marketing-sections-hero-value-props-and-a-simple-call-to-action-using-english-user-facing-copy",
+      "title": "Create a responsive public landing page for the “Fashion Point” app with clear branding and marketing sections (hero, value props, and a simple call-to-action) using English user-facing copy.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-basic-top-navigation-layout-app-header-with-links-for-home-and-sign-in-and-wire-sign-in-to-internet-identity-using-the-existing-template-hooks-without-modifying-any-immutable-hook-files",
+      "title": "Add a basic top navigation layout (app header) with links for Home and Sign In, and wire Sign In to Internet Identity using the existing template hooks (without modifying any immutable hook files).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-after-successful-sign-in-show-an-authenticated-state-in-the-ui-e-g-signed-in-plus-the-user-principal-and-a-sign-out-action",
+      "title": "After successful sign-in, show an authenticated state in the UI (e.g., “Signed in” plus the user principal and a Sign Out action).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-establish-a-coherent-visual-theme-for-fashion-point-colors-typography-spacing-and-component-styling-and-apply-it-consistently-across-the-landing-page-and-header-avoid-blue-and-purple-as-the-primary-palette",
+      "title": "Establish a coherent visual theme for Fashion Point (colors, typography, spacing, and component styling) and apply it consistently across the landing page and header. Avoid blue-and-purple as the primary palette.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-the-generated-static-images-logo-and-hero-visual-in-the-frontend-as-static-assets-under-frontend-public-assets-generated-and-render-them-on-the-landing-page",
+      "title": "Include the generated static images (logo and hero visual) in the frontend as static assets under frontend/public/assets/generated and render them on the landing page.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "gameProjectType": "none",
+  "projectName": "Fashion point",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

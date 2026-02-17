@@ -1,0 +1,64 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-17T18:06:20.210Z",
+  "summary": "Landing page shell, header, and authenticated UI state were added, along with a warm Tailwind/shadcn theme. However, the required generated image assets are not shown as added, and several “immutable” frontend paths appear in the diff (as added files), which conflicts with the constraint/AC that they must not be changed.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Include the generated static images (logo and hero visual) in the frontend as static assets under frontend/public/assets/generated with the exact filenames, and render them on the landing page.",
+      "reason": "The landing page/header reference the required image filenames, but the diff does not show the actual image files being added under frontend/public/assets/generated.",
+      "evidence": [
+        "frontend/src/components/layout/AppHeader.tsx (references /assets/generated/fashion-point-logo.dim_512x512.png)",
+        "frontend/src/pages/LandingPage.tsx (references /assets/generated/fashion-point-hero.dim_1600x900.png)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "Do not change any immutable frontend paths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.).",
+      "reason": "The diff includes files at immutable paths (at minimum as added/changed content), which violates the 'no changes to immutable paths' acceptance criterion/constraint.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Introduced/changed implementation files in paths explicitly marked immutable (Internet Identity hook, actor hook, and main entry).",
+      "reason": "BuildRequest explicitly forbids modifications to these paths; the diff includes them with substantive code.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Added a placeholder React Query hooks module (useQueries.ts).",
+      "reason": "Not requested by any REQ; REQs focus on landing page, header/auth UI, theme, and static assets.",
+      "evidence": [
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/auth/AuthStatus.tsx",
+    "frontend/src/components/layout/AppHeader.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/LandingPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
